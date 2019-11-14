@@ -27,7 +27,7 @@ if(r.ok):
 
         ## Mother of ALL OS spotted :)
         else:
-            process  = subprocess.Popen('git clone %s %s\%s' % (i['ssh_url'],i['name']) ,bufsize=2048, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            process  = subprocess.Popen('git clone %s %s/%s' % (i['ssh_url'],i['name']) ,bufsize=2048, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             process.wait()
             if process.returncode == 0:
                 print("Cloning done successfully in repository -->" , i['name'])
